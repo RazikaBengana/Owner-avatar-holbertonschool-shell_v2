@@ -1,23 +1,25 @@
 #include "shell.h"
 
 /**
-  * exec_cmd - program that executes a command with the given arguments
-  *
-  * this function is responsible for executing a command with the provided
-  * arguments;
-  * it first forks a new process to run the command;
-  * in the child process, it checks if the command is an absolute path or in
-  * the system's PATH;
-  * if it's in the PATH, it retrieves the full path using 'get_path'function;
-  * then, it attempts to execute the command using 'execve' with the
-  * provided arguments and environment variables
-  * (using 'my_environ' instead of 'environ');
-  * in case of any errors, it prints appropriate error messages
-  *
-  * @args: an array containing the command and its arguments
-  *
-  * Return: 1 on successful execution, 0 on failure
-  */
+ * exec_cmd - program that executes a command using a new child process
+ *
+ * this function attempts to execute a command specified by the `args` array;
+ * it first forks a new process;
+ * if the fork is successful, it checks whether the command is specified with
+ * an absolute path (`/`) or a relative path (`.`);
+ * if neither, it attempts to resolve the command's path using `get_path`;
+ * if the command or the arguments are not valid, it handles errors appropriately;
+ * after setting up the command, it uses `execve` to execute the command
+ * in the child process;
+ * the parent process waits for the command to complete and returns the exit status
+ *
+ * @args: a null-terminated array of strings representing the command
+ *        and its arguments;
+ *        args[0] contains the command, followed by any additional arguments
+ *
+ * Return: 1 on successful execution of the command by the parent process,
+ *         or 0 if an execution error occurs in the child process
+ */
 
 int exec_cmd(char **args)
 {
