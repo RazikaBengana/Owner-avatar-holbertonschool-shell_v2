@@ -1,21 +1,26 @@
 #include "shell.h"
 
 /**
-  * main - the entry point of a the 'shell_v2' program
-  *
-  * this function initializes necessary variables and structures, sets up the signal handler
-  * for Ctrl+C (SIGINT), and enters a loop where it repeatedly reads user input
-  * and executes commands until the user exits;
-  * within the loop, the function checks if the shell is running in interactive
-  * mode and prints a prompt if it is;
-  * it reads a line of input using the 'func_read' function and processes user commands;
-  * it supports built-in commands like "exit," "env," and "cd" (handled by other functions)
-  * and executes other shell commands using the 'exec_cd' function;
-  * the function also handles memory cleanup and frees allocated resources
-  * before exiting the shell;
-  *
-  * Return: 0 on successful execution, 1 on failure
-  */
+ * main - entry point for the shell program
+ *
+ * this function implements a shell interface that reads commands
+ * from the user and executes them;
+ *
+ * the shell supports basic functionality:
+ * - it handles the 'SIGINT' signal to prevent the shell from terminating
+ *   when the user presses 'Ctrl+C'
+ * - it prompts the user with "$ " if the input is from a terminal
+ * - it reads a line of input using the 'func_read' function
+ * - it supports the 'exit' command to terminate the shell
+ * - it supports the 'env' command to print environment variables using
+ *   the 'print_env' function
+ * - it splits the input line into arguments using the 'func_split' function
+ * - it executes the command specified by the arguments using the 'exec_cmd'
+ *   function
+ * - it frees all dynamically allocated memory to prevent memory leaks
+ *
+ * Return: 0, indicating successful termination
+ */
 
 int main(void)
 {
