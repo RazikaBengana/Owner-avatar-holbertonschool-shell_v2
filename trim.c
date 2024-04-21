@@ -3,13 +3,13 @@
 /**
   * trim - program that removes leading and trailing whitespace from a string
   *
-  * @str: the input string to be trimmed
-  *
   * this function removes any leading and trailing whitespace characters
   * (space and tab) from the input string 'str';
   * it works by finding the first non-whitespace character from the beginning
   * and the end of the string and then adjusting the string's pointers and
-  * null-terminating it accordingly to create a trimmed version of the string;
+  * null-terminating it accordingly to create a trimmed version of the string
+  *
+  * @str: the input string to be trimmed
   *
   * Return: if 'str' is NULL or an empty string,
   *         the function returns the input string as is;
