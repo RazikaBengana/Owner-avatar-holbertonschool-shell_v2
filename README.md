@@ -27,7 +27,7 @@
 <a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#computer-requirements">Requirements</a> •
 <a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#bulb-more-info">More Info</a> •
 <a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#package-installation">Installation</a> •
-<a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#keyboard-basic-usage">Basic usage</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#keyboard-basic-usage">Basic Usage</a> •
 <a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#mag_right-resources">Resources</a> •
 <a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#bust_in_silhouette-authors">Authors</a> •
 <a href="https://github.com/RazikaBengana/holbertonschool-shell_v2#octocat-license">License</a>
@@ -113,7 +113,7 @@ This project has been created by [**Holberton School**](https://www.holbertonsch
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## :memo: Learning objectives
+## :memo: Learning Objectives
 
 <br>
 
@@ -412,7 +412,7 @@ make
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## :keyboard: Basic usage
+## :keyboard: Basic Usage
 
 <br>
 <br>
@@ -515,7 +515,7 @@ exit
 
 <br>
 
-**${\color{blue}Razika \space Bengana}$**
+<img src="https://img.shields.io/badge/Razika%20Bengana-darkblue" alt="Razika Bengana" width="120">
 
 <br>
 <br>
